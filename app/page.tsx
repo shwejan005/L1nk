@@ -1,9 +1,10 @@
+import Hero from '@/components/ui/Hero'
 import React from 'react'
 
-const page = () => {
+function page() {
   return (
     <div>
-      L1nk
+      <Hero />
     </div>
   )
 }

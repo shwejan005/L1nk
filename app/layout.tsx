@@ -3,6 +3,7 @@ import { League_Spartan } from "next/font/google";
 import "./globals.css";
 import ConvexClientProvider from "@/components/ConvexClientProvider";
 import { ClerkProvider } from "@clerk/nextjs";
+import Header from "@/components/ui/Header";
 
 const primaryFont = League_Spartan({
   subsets: ["latin"],
@@ -23,9 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={primaryFont.className}>
+      <body className={`${primaryFont.className} min-h-screen max-w-full antialiased`}>
         <ClerkProvider dynamic>
-          <ConvexClientProvider>{children}</ConvexClientProvider>
+          <ConvexClientProvider>
+            <Header />
+            {children}
+          </ConvexClientProvider>
         </ClerkProvider>
       </body>
     </html>
