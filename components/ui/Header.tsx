@@ -1,16 +1,28 @@
-import { Belanosima } from 'next/font/google'
-import React from 'react'
+'use client';
 
-const brandFont = Belanosima({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-brand",
-})
+import React from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 function Header() {
   return (
-    <div className={`${brandFont.className} bg-black text-white text-3xl flex items-center justify-center p-4`}>L1NK</div>
-  )
+    <header className="fixed top-0 left-0 w-full z-50 shadow-md bg-black">
+      <Link
+        href="/"
+        className="text-white font-semibold text-4xl flex items-center justify-center p-5"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+        >
+          L1NK
+        </motion.div>
+      </Link>
+
+      
+    </header>
+  );
 }
 
-export default Header
+export default Header;

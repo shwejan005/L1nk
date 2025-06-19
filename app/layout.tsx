@@ -4,6 +4,7 @@ import "./globals.css";
 import ConvexClientProvider from "@/components/ConvexClientProvider";
 import { ClerkProvider } from "@clerk/nextjs";
 import Header from "@/components/ui/Header";
+import Footer from "@/components/ui/Footer";
 
 const primaryFont = League_Spartan({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
           <ConvexClientProvider>
             <Header />
             {children}
+            <Footer />
           </ConvexClientProvider>
         </ClerkProvider>
       </body>
