@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="bg-black text-white py-32">
+    <section className="text-white py-32">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-7 items-center">
         {/* TEXT BLOCK */}
         <motion.div
@@ -50,7 +50,7 @@ export default function HeroSection() {
           {/* CTA */}
           <SignedIn>
             <Link href="/dashboard">
-              <Button className="mt-6 text-base px-10 py-5 bg-white/20 backdrop-blur-md text-white/80 hover:cursor-pointer shadow-md hover:bg-white/20 border border-white/20 transition duration-300 ease-out transform hover:scale-105 rounded-3xl">
+              <Button className="mt-6 text-base px-10 py-5 bg-white/10 backdrop-blur-md text-white/80 hover:cursor-pointer shadow-md hover:bg-white/20 border border-white/20 transition duration-300 ease-out transform hover:scale-105 rounded-3xl">
                 Get Started <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
@@ -58,7 +58,7 @@ export default function HeroSection() {
 
           <SignedOut>
             <SignInButton mode="modal">
-              <Button className="mt-6 text-base px-10 py-5 bg-white/20 backdrop-blur-md text-white/80 hover:cursor-pointer shadow-md hover:bg-white/20 border border-white/20 transition duration-300 ease-out transform hover:scale-105 rounded-3xl">
+              <Button className="mt-6 text-base px-10 py-5 bg-white/10 backdrop-blur-md text-white/80 hover:cursor-pointer shadow-md hover:bg-white/20 border border-white/20 transition duration-300 ease-out transform hover:scale-105 rounded-3xl">
                 Get Started <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </SignInButton>
